@@ -1,0 +1,230 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.prev-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.folder-icon {
+    width: 40px;
+    height: 30px;
+}
+.btn {
+    padding: 10px 15px;
+    border: none;
+    background: #082541;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+.btn:hover {
+    opacity: 0.7;
+}
+.menu {
+    display: flex;
+    margin: 15px -4px;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #a1a1a1;
+}
+.menu__item {
+    padding: 5px 20px;
+    margin: 0 4px;
+    border: 1px solid #a1a1a1;
+    border-bottom: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.menu__link {
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in-out;
+}
+.menu__link:hover {
+    opacity: 1;
+}
+.menu__link.active {
+    opacity: 1;
+}
+.menu__link.active .menu__item {
+    position: relative;
+}
+.menu__link.active .menu__item:before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    height: 2px;
+    width: 100%;
+    margin-left: -50%;
+    background: #ffffff;
+}
+.menu-icon {
+    width: 30px;
+}
+.user__title {
+    display: flex;
+    align-items: center;
+}
+.user__text {
+    display: inline-block;
+    color: darkgrey;
+    font-size: 18px;
+}
+.album__item {
+    position: relative;
+    display: flex;
+    padding-right: 10%;
+    background: #f1f1f1;
+    border: 1px solid #a2a2a2;
+}
+.album__item:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: calc(50% - 15px);
+    width: 60px;
+    height: 30px;
+    background: url("../image/right-arrow.svg") no-repeat;
+    background-size: contain;
+
+}
+.album__img img {
+    width: 130px;
+    height: 95px;
+    display: block;
+}
+.album__content {
+    margin-left: 15px;
+}
+.album__name {
+    color: #006DF0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 0 20px 0;
+}
+.album__property {
+    color: darkgrey;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+.link {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2.5%;
+}
+.photo_item {
+    position: relative;
+    border-radius: 10px;
+    margin: 0 2.5% 5%;
+    background: #f1f1f1;
+}
+.photo__img {
+    width: 150px;
+    height: 100px;
+    display: block;
+    cursor: pointer;
+}
+.photo__img:hover + .photo__content {
+    display: block;
+}
+.photo__content {
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 110%;
+    background: rgba(0,0,0, 0.8);
+    width: 200%;
+    color: #fff;
+    z-index: 1;
+}
+.photo__content:before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgba(0,0,0, 0.8);
+}
+.photo__img img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: block;
+}
+.photo__link {
+    display: block;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #006DF0;
+}
+.comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.comment__image {
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.comment__text {
+}
+.btn__comments {
+    margin-bottom: 20px;
+}
+.comment__link {
+    color: #006DF0;
+    text-decoration: none;
+}
+
+@media (max-width: 1140px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+div.example {
+    margin-left: 20px;
+}
+
+div.intro {
+    margin-left: 20px;
+    color: #000;
+}
+
+.dropzone {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f1f1f1;
+    height: 200px;
+    width: 80%;
+    border-radius: 10px;
+    border: 4px dashed #006DF0;
+}
+.dz-default.dz-message {
+    display: block;
+    margin-bottom: 10px;
+    color: #006DF0;
+}
+.dz-preview {
+    display: inline-block;
+    margin: 0 15px;
+}
